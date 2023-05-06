@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+
+.headline {
+  position: relative;
+  height: 400px;
+  text-align: center;
+  background: #3F51B5;
+    color: #FFFFFF;
+    padding: 150px 0;
+  background-size: cover;
+}
+.headline:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-animation: fade-in 0.75s 0.25s ease-in forwards;
+          animation: fade-in 0.75s 0.25s ease-in forwards;
+}
+
+.logo {
+  height: 75px;
+  float: left;
+}
+.logo:before, .logo:after {
+  position: absolute;
+  font-size: 7em;
+  font-weight: 300;
+  line-height: 0;
+  color: #fff;
+  top: 25px;
+}
+.logo:before {
+  content: "»";
+  left: 20px;
+}
+.logo:after {
+  content: "«";
+  left: 34px;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

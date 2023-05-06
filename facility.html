@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facility</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script> src="https://unpkg.co/gsap@3/dist/gsap.min.js" </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="index.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/f48cacfddf.js" crossorigin="anonymous"></script>
+
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+   html { overflow-y: scroll; }
+body{
+   background-color: #90ADF9;
+ 
+}
+h1 {
+ 
+ font-family: serif;
+ font-weight: bold;
+ text-align: center;
+}
+.col-md-12{
+   height: 0px;
+   width: 100%;
+}
+nav.navbar.bootsnav{
+   border: none;
+   background: none;
+
+}
+nav.navbar.bootsnav ul.nav > li{ margin-right: 20px; }
+nav.navbar.bootsnav ul.nav > li > a{
+   padding: 10px 15px;
+   border-radius: 0;
+   font-size: 15px;
+   font-weight: 600;
+   color: #fff;
+   text-transform: uppercase;
+   position: relative;
+   transition: all 0.5s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 10px 30px 10px 15px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+ color: #36000b;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:before,
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+   content: "";
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: -1;
+   transform: translateX(-50%) translateY(-50%) rotate(0deg);
+   transition: all 0.4s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+   width: 50px;
+   background-color: #90ADF9;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:before,
+nav.navbar.bootsnav ul.nav > li.active > a > span:before{
+ transform: translateX(-50%) translateY(-50%) rotate(0);
+ opacity: 1;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:after,
+nav.navbar.bootsnav ul.nav > li.active > a > span:after{
+ transform: translateX(-50%) translateY(-50%) rotate(0);
+ opacity: 1;
+ width: 0;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   margin: 0 0 0 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+   top: 100%;
+   transition: all 0.8s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{ top: 140%; }
+.dropdown-menu.multi-dropdown{
+   position: absolute;
+   left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   border: none;
+   border-radius: 10px;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+   font-size: 16px;
+   font-weight: bold;
+   color:#90ADF9 ;
+}
+@media only screen and (max-width: 990px){
+   .dropdown-menu.multi-dropdown{ left: 0 !important; }
+   nav.navbar.bootsnav .navbar-toggle{
+       background: transparent !important;
+       color: #fff;
+   }
+   nav.navbar.bootsnav ul.nav > li{
+       width: 75%;
+       margin: 5px auto 15px;
+   }
+   nav.navbar.bootsnav.navbar-mobile ul.nav > li > a{
+       text-align: center;
+       color: #fff;
+       border: none;
+   }
+   nav.navbar.bootsnav ul.nav > li.active > a,
+   nav.navbar.bootsnav ul.nav > li > a,
+   nav.navbar.bootsnav ul.nav > li > a:hover,
+   nav.navbar.bootsnav ul.nav > li.on > a{ color: #36000b; }
+   nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background: #90ADF9; }
+   nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu > li > a{
+       color: #fff;
+       border-bottom-color: none;
+   }
+   nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
+   nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title,
+   nav.navbar.bootsnav.navbar-mobile ul.nav ul.dropdown-menu .col-menu ul.menu-col li a{
+       font-size: 14px;
+       font-weight: normal;
+       color: #fff;
+   }
+    
+    
+</style>
+   
+</head>
+<body>
+   
+    <div class="container">
+        
+        <div class="row">
+       
+            
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                  
+                    <div class="navbar-header">
+                      
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                   
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            
+                            <li class="btn ">
+                                
+                            <a  href="index.html" data-hover="Home">Home <span></span></a></li>
+                            
+                            <li class="btn dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">About <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="about.html">About School</a></li>
+                                    <li><a href="facility.html">Facility</a></li>
+                                    <li><a href="rules.html">General Rules and Regulations</a></li>
+                                    <li><a href="#">Fee Structure</a></li>
+                                    
+                                
+                                </ul>
+                            </li>
+                            <li class="btn dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">Academics <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    
+                                    <li><a href="Academics.html">Academics</a></li>
+                                    <li><a href="#">Faculty and Staff</a></li>
+                                
+                                
+                                </ul>
+                            </li>
+                            
+                         <!--   <li class="dropdown btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">Pages <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                        
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                                <ul class="dropdown-menu multi-dropdown animated">
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                   <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                </ul>
+                            </li> -->
+                          
+                            <li  class="btn" ><a href="admission.html" data-hover="Portfolio">admission <span></span></a></li>
+
+                     <!--  <li class="dropdown megamenu-fw btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megamenu <span></span></a>
+                                <ul class="dropdown-menu megamenu-content animated" role="menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu One</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Two</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Three</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Four</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li class="btn"><a href="contact.html" data-hover="Contact">Contact Us<span></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+   <header>
+  <div class="headline">
+    <div class="inner">
+      <h1>Facility</h1>
+    
+    </div>
+  </div>
+</header>
+<a id="button"></a>
+
+<div id="wrapper">
+   <div id="container">
+
+       <section class="open-book">
+           <header>
+               <h1>Welcome to Anju Gill Academy</h1>
+               <h6>Jaunpur</h6>
+           </header>
+           <article>
+               <h2 class="chapter-title">Facility</h2>
+               <p>
+                AGA is an educational institution that prioritizes student learning and engagement through the use of advanced teaching technologies. The school features well-equipped classrooms with projectors that provide an immersive learning experience to students. These projectors enable the presentation of complex concepts and ideas through text, images, and videos in a way that is easier for students to comprehend.         
+
+                </p>
+                <div class="about_us__img">
+                <img class="img" src="https://agsacademy.com/wp-content/uploads/2018/12/DSC_5862-750x300.jpg" alt="smart class">
+                </div>
+               <br>
+               <p>
+                AGA's laboratories are equipped with state-of-the-art equipment and are used to teach a range of subjects such as English, mathematics, physics, chemistry, and biology. The laboratory approach to teaching allows students to gain first-hand experience and practice critical thinking and problem-solving skills. Additionally, AGA's language laboratories provide an ideal environment for students to improve their fluency and confidence in a second language.
+</p>
+               <p>
+                The use of smart boards in several laboratories at AGA is an innovative addition to the teaching environment. These interactive whiteboards provide teachers with a variety of tools to enhance the learning experience, including digital pen tools, annotation features, and multimedia integration. The use of smart boards promotes active learning and encourages student participation, providing a collaborative learning environment.
+</p>
+               <br>
+               <p>
+                In conclusion, AGA is an institution that is committed to providing students with a high-quality education through the use of advanced teaching technologies. The integration of projectors, laboratories, and smart boards enhances the learning experience by providing students with practical knowledge and skills that can be applied in their academic and professional pursuits.
+
+
+
+</p>
+              
+           </article>
+           <footer>
+               <ol id="page-numbers">
+                   <li>1</li>
+                   <li>2</li>
+               </ol>
+           </footer>
+       </section>
+
+   </div>
+</div>
+
+<hr>
+
+
+
+
+
+
+
+<footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+          
+               
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p style="text-align: center;">Copyright &copy; 2023, All Right Reserved <a href="https://agsacademy.com/">Anju gill academy</a></p>
+                        </div>
+                    </div>
+                 
+             
+    
+        </div>
+    </footer>
+
+</body>
+</html>

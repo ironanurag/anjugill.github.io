@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Rules And Regulations</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script> src="https://unpkg.co/gsap@3/dist/gsap.min.js" </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="index.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://kit.fontawesome.com/f48cacfddf.js" crossorigin="anonymous"></script>
+
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+   html { overflow-y: scroll; }
+body{
+   background-color: #90ADF9;
+ 
+}
+h1 {
+ 
+ font-family: serif;
+ font-weight: bold;
+ text-align: center;
+}
+.col-md-12{
+   height: 0px;
+   width: 100%;
+}
+nav.navbar.bootsnav{
+   border: none;
+   background: none;
+
+}
+nav.navbar.bootsnav ul.nav > li{ margin-right: 20px; }
+nav.navbar.bootsnav ul.nav > li > a{
+   padding: 10px 15px;
+   border-radius: 0;
+   font-size: 15px;
+   font-weight: 600;
+   color: #fff;
+   text-transform: uppercase;
+   position: relative;
+   transition: all 0.5s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 10px 30px 10px 15px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+ color: #36000b;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:before,
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+   content: "";
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: -1;
+   transform: translateX(-50%) translateY(-50%) rotate(0deg);
+   transition: all 0.4s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+   width: 50px;
+   background-color: #90ADF9;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:before,
+nav.navbar.bootsnav ul.nav > li.active > a > span:before{
+ transform: translateX(-50%) translateY(-50%) rotate(0);
+ opacity: 1;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:after,
+nav.navbar.bootsnav ul.nav > li.active > a > span:after{
+ transform: translateX(-50%) translateY(-50%) rotate(0);
+ opacity: 1;
+ width: 0;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   margin: 0 0 0 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+   top: 100%;
+   transition: all 0.8s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{ top: 140%; }
+.dropdown-menu.multi-dropdown{
+   position: absolute;
+   left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   border: none;
+   border-radius: 10px;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+   font-size: 16px;
+   font-weight: bold;
+   color:#90ADF9 ;
+}
+@media only screen and (max-width: 990px){
+   .dropdown-menu.multi-dropdown{ left: 0 !important; }
+   nav.navbar.bootsnav .navbar-toggle{
+       background: transparent !important;
+       color: #fff;
+   }
+   nav.navbar.bootsnav ul.nav > li{
+       width: 75%;
+       margin: 5px auto 15px;
+   }
+   nav.navbar.bootsnav.navbar-mobile ul.nav > li > a{
+       text-align: center;
+       color: #fff;
+       border: none;
+   }
+   nav.navbar.bootsnav ul.nav > li.active > a,
+   nav.navbar.bootsnav ul.nav > li > a,
+   nav.navbar.bootsnav ul.nav > li > a:hover,
+   nav.navbar.bootsnav ul.nav > li.on > a{ color: #36000b; }
+   nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background: #90ADF9; }
+   nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu > li > a{
+       color: #fff;
+       border-bottom-color: none;
+   }
+   nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
+   nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title,
+   nav.navbar.bootsnav.navbar-mobile ul.nav ul.dropdown-menu .col-menu ul.menu-col li a{
+       font-size: 14px;
+       font-weight: normal;
+       color: #fff;
+   }
+    
+    
+</style>
+   
+</head>
+<body>
+   
+    <div class="container">
+        
+        <div class="row">
+       
+            
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                  
+                    <div class="navbar-header">
+                      
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                   
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            
+                            <li class="btn ">
+                                
+                            <a  href="index.html" data-hover="Home">Home <span></span></a></li>
+                            
+                            <li class="btn dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">About <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="about.html">About School</a></li>
+                                    <li><a href="facility.html">Facility</a></li>
+                                    <li><a href="rules.html">General Rules and Regulations</a></li>
+                                    <li><a href="#">Fee Structure</a></li>
+                                    
+                                
+                                </ul>
+                            </li>
+                            <li class="btn dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">Academics <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    
+                                    <li><a href="Academics.html">Academics</a></li>
+                                    <li><a href="#">Faculty and Staff</a></li>
+                                
+                                
+                                </ul>
+                            </li>
+                            
+                         <!--   <li class="dropdown btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">Pages <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                        
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                                <ul class="dropdown-menu multi-dropdown animated">
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                   <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                </ul>
+                            </li> -->
+                          
+                            <li  class="btn" ><a href="admission.html" data-hover="Portfolio">admission <span></span></a></li>
+
+                     <!--  <li class="dropdown megamenu-fw btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megamenu <span></span></a>
+                                <ul class="dropdown-menu megamenu-content animated" role="menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu One</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Two</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Three</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Four</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li class="btn"><a href="contact.html" data-hover="Contact">Contact Us<span></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+   <header>
+  <div class="headline">
+    <div class="inner">
+      <h1>General Rules And Regulations</h1>
+    
+    </div>
+  </div>
+</header>
+<a id="button"></a>
+
+<div id="wrapper">
+   <div id="container">
+
+       <section class="open-book">
+           <header>
+               <h1>Welcome to Anju Gill Academy</h1>
+               <h6>Jaunpur</h6>
+           </header>
+           <article>
+               <h2 class="chapter-title">General Rules And Regulations</h2>
+               <dl>  <dt><strong>General Information</strong></dt> </dl>
+               <br>
+               <ul>
+                   <li> English is the medium of instruction.</li>
+                   <li>
+                    Hindi is introduced from Nursery classes.
+                   </li>
+                   <li>Hindi as a local language is introduced across the school.</li>
+                   <li>Students from classes V to VIII learn three languages – English, Hindi, and Sanskrit.</li>
+                   <li>Students of classes IX and X learn two languages – English, Hindi</li>
+               </ul>
+               <br>
+               <dl>  <dt><strong>Code of Conduct</strong></dt> </dl>
+               <br>
+              <h5>A. Every student must :</h5>
+               <ul>
+                   <li>Be just.</li>
+                   <li>
+                    Respect humanity.
+                   </li>
+                   <li>Come to school in neat, clean, and proper uniform with clean shoes.</li>
+                   <li>Be regular in attendance.</li>
+                   <li>Be punctual.</li>
+                   <li>Attend assembly without fail.</li>
+                   <li>Be honest at work and always be considerate towards rights of others.</li>
+                   <li>Be courteous and respectful towards parents, teachers, and visitors.</li>
+                   <li>Look after and protect the property of the school, keep it clean and tidy.</li>
+                   <li> Keep the classrooms neat and throw trash etc. in waste paper baskets only.</li>
+                   <li>Reach the classroom as soon as the warning bell sounds or the recess is over.</li>
+                   <li>Show sportsmanship at all time.</li>
+               </ul>
+
+<br>
+               <h5>B. Student must not :</h5>
+               <br>
+               <ul>
+                   <li> Bring articles of value such as rings or other pieces of jewel to the school. The school will not be held responsible for the loss of such articles.</li>
+                   <li>
+                    Lend or borrow money or other articles.
+                   </li>
+                   <li>Shout or make noise in the school building or create a confusion in the auditorium or a classroom.
+                    </li>
+                   <li>Leave cycles unlocked or ride in the school compound.</li>
+                   <li>Bring electronic gadgets like the mobile phones, cameras, cutting instruments into the school. If the electronic gadgets are brought, they will be confiscated.</li>
+                   <li>Light fire crackers or splash colors during Diwali /Holi or any other occasion on the school premises or in the school buses.</li>
+               </ul>
+               <br>
+               <h5>C. Important Points to Remember:</h5>
+               <br>
+               <ul>
+                   <li> Never neglect the assigned lesson or homework.</li>
+                   <li>
+                    Never put off what you can do today until tomorrow.
+                   </li>
+                   <li>Live well by doing good.
+                    </li>
+                   <li>Get the Progress Report signed by the parent/guardian within 3 days of its receipt. A forged signature, if detected, will invite disciplinary action.</li>
+                   <li>Obey class monitors, house captains and other students on duty.</li>
+                   <li>Demonstrate exemplary behavior at the school and in the community.</li>
+               </ul>
+               <br>
+               <dl>  <dt><strong>School Uniform</strong></dt> </dl>
+              <dt><strong>Dress Code for Nursery to Sr. K.G</strong></dt> 
+           
+            <br>
+              <dt> <strong>Girl</strong></dt> 
+             <p>Blue and white Checked shirt, Blue Pino Frock, White socks, Black Shoes, Identity Card, White Hair Band/ Two Ponies or Plates with white ribbons.</p>
+            <br>
+       
+              <dt> <strong>Boys</strong></dt> 
+             <p>Blue Checked shirt, Blue half pant ,  White socks, Black Shoes, and Identity Card.</p>
+            <br>
+            <br>
+             <dt> <strong>Dress Code for Classes I to VIII</strong></dt>
+             <br>
+              <dt> <strong>Girl</strong></dt> 
+             <p>Grey Pino frock, White shirt, School Belt, Grey Tie with the academy logo, White socks, Black Shoes, Identity Card, White Hair Band/Two Ponies or Plates with white ribbons.</p>
+            <br>
+       
+              <dt> <strong>Boys</strong></dt> 
+             <p>Grey half pant,  White shirt,  School Belt, Grey Tie with the academy logo, White socks, Black Shoes, Identity Card,</p>
+            <br>
+            <dl>  <dt><strong>Admission and Withdrawal</strong></dt> </dl>
+              <h5>The following categories of students may not be allowed to continue in the school.</h5>
+               <ul>
+                   <li>Those who fail to show satisfactory progress and are unwilling or unable to benefit from the educational program of the school.</li>
+                   <li>
+                    Those whose fees are in arrears.
+                   </li>
+                   <li>Those whose behavior and conduct, in the opinion of the Principal, is harmful to the interest of the school.</li>
+                   <li>Those who fail twice in the same class and are below average. The amount of security deposited at the time of admission should be claimed within six months from the date of leaving the school, otherwise it will stand forfeited.</li>
+                   <li>Withdrawal/Transfer in the month of March will not be accepted. Transfer or school-leaving certificate and Progress Report shall not be issued until all dues are paid. Duplicate copies of such certificates are not issued. In special cases, such certificates are issued after verification and on payment of Rs. 100/- as a Duplicate Certificate Fee.</li>
+                   <li>A calendar months’ notice should be given in writing before the withdrawal, otherwise, a month’s fee will be charged.</li>
+                   <li>Those who are leaving in April must pay the fees of May also.</li>
+                   <li>The school-leaving certificate will not be issued until all the dues are paid.</li>
+               </ul>
+
+
+               <dl>  <dt><strong>Leave Rule</strong></dt> </dl>
+               <ul>
+                   <li>Absence without leave is viewed seriously. A student shall be removed from the rolls if the student is absent for ten consecutive days. At the discretion of the Principal, she/he can be re-admitted after he/she has paid all the dues with fresh admission fee.</li>
+                   <li>
+                    For a leave of absence, a letter must be sent by the parent and also a note must be made in the diary. All students are expected to attend classes on the Opening Day after each vacation and on the Closing Day before each vacation.
+                   </li>
+                   <li>A student’s absence due to sickness must be supported by a medical certificate.</li>
+                   <li>A student must produce a fitness certificate from an authorized doctor for attending the school after suffering from an infectious disease such as measles, chicken pox, cholera, mumps, whooping cough etc.</li>
+                   <li>The school doctor’s opinion is required and respected in situations where it is needed for conflict resolution.</li>
+                   <li>A student may not be allowed to sit in the annual examination if he/she has not put in a minimum of 75% of the attendance for the current academic session.</li>
+                     </ul>
+             <!--  <p>
+                   She was then picturing herself making marks on a novel like she used to in school. In her true fashion, she got carried away with "What ifs." 
+               </p>
+               <ul>
+                   <li>
+                       "What if highlighting the text actually looked <mark>like a highlighter</mark>?"
+                       <ul>
+                           <li>"What if I wanted it to be <mark class="pink">pink</mark>?"</li>
+                           <li>"<mark class="blue">Blue</mark>?"</li>
+                           <li>"<mark class="green">Green</mark>?"</li>
+                           <li>"<mark class="orange">Orange</mark>?"</li>
+                       </ul>
+                   </li>
+                   <li>"What if I found <s>a typo</s><sup>an error in the content</sup> and wanted to make a correction?"</li>
+                   <li>"What if I was viewing this on mobile&mdash;"</li>
+               </ul>
+               <p>
+                   The true obstacle showed its form. Responsiveness. How on Earth will she make this work?
+               </p>
+               <p>
+                   Erin pulled out her notepad and started sketching. First she began to illustrate the wireframe of the book in its entirety. Then she recorded some notes on how each element would break down as the screen size got smaller. After several minutes, the blueprint was complete. She came to the conclusion that mobile viewing must stay minimal. The pages go away, which makes the page numbers no longer have a function so they must go away, and if those go away then there is no need for a cover since it is used to help hold and protect pages.
+               </p>
+               <p>
+                   She looks back at the blinking cursor of her blank canvas in Sublime Text 2. Doubt begins to linger in the back of her mind with the thought of her new code never being used and her time spent ends up being a waste. Her fingers were typing anyway.
+               </p>
+               <p>
+                   Erin smirked, "Well at least I think it's worth a try."
+               </p>
+           -->
+           </article>
+           <footer>
+               <ol id="page-numbers">
+                   <li>1</li>
+                   <li>2</li>
+               </ol>
+           </footer>
+       </section>
+
+   </div>
+   <hr>
+</div>
+
+<footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+          
+               
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p style="text-align: center;">Copyright &copy; 2023, All Right Reserved <a href="https://agsacademy.com/">Anju gill academy</a></p>
+                        </div>
+                    </div>
+                 
+             
+    
+        </div>
+    </footer>
+
+</body>
+</html>

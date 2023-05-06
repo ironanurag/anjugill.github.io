@@ -1,0 +1,805 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Anju Gill Academy</title>
+     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+ 	   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="styles.css">
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script> src="https://unpkg.co/gsap@3/dist/gsap.min.js" </script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/f48cacfddf.js" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+    html { overflow-y: scroll; }
+body{
+    background-color: #90ADF9;
+    
+}
+h1 {
+  
+  font-family: serif;
+  font-weight: bold;
+  text-align: center;
+}
+.col-md-12{
+    height: 0px;
+    width: 100%;
+}
+nav.navbar.bootsnav{
+    border: none;
+    background: none;
+
+}
+nav.navbar.bootsnav ul.nav > li{ margin-right: 20px; }
+nav.navbar.bootsnav ul.nav > li > a{
+    padding: 10px 15px;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 10px 30px 10px 15px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+  color: #36000b;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:before,
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    transition: all 0.4s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+    width: 50px;
+    background-color: #90ADF9;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:before,
+nav.navbar.bootsnav ul.nav > li.active > a > span:before{
+  transform: translateX(-50%) translateY(-50%) rotate(0);
+  opacity: 1;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:after,
+nav.navbar.bootsnav ul.nav > li.active > a > span:after{
+  transform: translateX(-50%) translateY(-50%) rotate(0);
+  opacity: 1;
+  width: 0;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin: 0 0 0 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+    top: 100%;
+    transition: all 0.8s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{ top: 140%; }
+.dropdown-menu.multi-dropdown{
+    position: absolute;
+    left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 10px;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+    font-size: 16px;
+    font-weight: bold;
+    color:#90ADF9 ;
+}
+@media only screen and (max-width: 990px){
+    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+    nav.navbar.bootsnav .navbar-toggle{
+        background: transparent !important;
+        color: #fff;
+    }
+    nav.navbar.bootsnav ul.nav > li{
+        width: 75%;
+        margin: 5px auto 15px;
+    }
+    nav.navbar.bootsnav.navbar-mobile ul.nav > li > a{
+        text-align: center;
+        color: #fff;
+        border: none;
+    }
+    nav.navbar.bootsnav ul.nav > li.active > a,
+    nav.navbar.bootsnav ul.nav > li > a,
+    nav.navbar.bootsnav ul.nav > li > a:hover,
+    nav.navbar.bootsnav ul.nav > li.on > a{ color: #36000b; }
+    nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background: #90ADF9; }
+    nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu > li > a{
+        color: #fff;
+        border-bottom-color: none;
+    }
+    nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
+    nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title,
+    nav.navbar.bootsnav.navbar-mobile ul.nav ul.dropdown-menu .col-menu ul.menu-col li a{
+        font-size: 14px;
+        font-weight: normal;
+        color: #fff;
+    }
+     
+     
+</style>
+	
+ </head>
+  <body>
+  
+<div class="container">
+        
+        <div class="row">
+       
+            
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                  
+                    <div class="navbar-header">
+                      
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                   
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            
+                            <li class="btn active">
+                                
+                            <a  href="index.html" data-hover="Home">Home <span></span></a></li>
+                            
+                            <li class="btn dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">About <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="about.html">About School</a></li>
+                                    <li><a href="facility.html">Facility</a></li>
+                                    <li><a href="rules.html">General Rules and Regulations</a></li>
+                                    <li><a href="#">Fee Structure</a></li>
+                                    
+                                
+                                </ul>
+                            </li>
+                            <li class="btn dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">Academics <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    
+                                    <li><a href="Academics.html">Academics</a></li>
+                                    <li><a href="#">Faculty and Staff</a></li>
+                                
+                                
+                                </ul>
+                            </li>
+                            
+                         <!--   <li class="dropdown btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">Pages <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                        
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                                <ul class="dropdown-menu multi-dropdown animated">
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                   <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                </ul>
+                            </li> -->
+                          
+                            <li  class="btn" ><a href="admission.html" data-hover="Portfolio">admission <span></span></a></li>
+
+                     <!--  <li class="dropdown megamenu-fw btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megamenu <span></span></a>
+                                <ul class="dropdown-menu megamenu-content animated" role="menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu One</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Two</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Three</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Four</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li class="btn"><a href="contact.html" data-hover="Contact">Contact Us<span></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+     
+    <div id="wrapper">
+  <section class="slideshow" id="js-header">
+    
+    <div class="slideshow__slide js-slider-home-slide is-current" data-slide="1">
+		<div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+			<div class="slideshow__slide-background-load-wrap background-absolute">
+				<div class="slideshow__slide-background-load background-absolute">
+					<div class="slideshow__slide-background-wrap background-absolute">
+						<div class="slideshow__slide-background background-absolute">
+							<div class="slideshow__slide-image-wrap background-absolute">
+								<div class="slideshow__slide-image background-absolute" style="background-image: url('https://agsacademy.com/wp-content/uploads/2018/01/IMG_5353-750x300.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slideshow__slide-caption">
+			<div class="slideshow__slide-caption-text">
+				<div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+					<h1 class="slideshow__slide-caption-title">Everything broken can be repaired</h1>
+					<a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+						<span class="slideshow__slide-caption-subtitle-label">See how</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="slideshow__slide js-slider-home-slide is-next" data-slide="2">
+		<div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+			<div class="slideshow__slide-background-load-wrap background-absolute">
+				<div class="slideshow__slide-background-load background-absolute">
+					<div class="slideshow__slide-background-wrap background-absolute">
+						<div class="slideshow__slide-background background-absolute">
+							<div class="slideshow__slide-image-wrap background-absolute">
+								<div class="slideshow__slide-image background-absolute" style="background-image: url('https://agsacademy.com/wp-content/uploads/2018/12/DSC_6022-750x300.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slideshow__slide-caption">
+			<div class="slideshow__slide-caption-text">
+				<div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+					<h1 class="slideshow__slide-caption-title">See through the field</h1>
+					<a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+						<span class="slideshow__slide-caption-subtitle-label">Learn more about</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="slideshow__slide js-slider-home-slide is-prev" data-slide="3">
+		<div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+			<div class="slideshow__slide-background-load-wrap background-absolute">
+				<div class="slideshow__slide-background-load background-absolute">
+					<div class="slideshow__slide-background-wrap background-absolute">
+						<div class="slideshow__slide-background background-absolute">
+							<div class="slideshow__slide-image-wrap background-absolute">
+								<div class="slideshow__slide-image background-absolute" style="background-image: url('https://agsacademy.com/wp-content/uploads/2015/12/Nursery-SwimmingPool1-750x300.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slideshow__slide-caption">
+			<div class="slideshow__slide-caption-text">
+				<div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+					<h1 class="slideshow__slide-caption-title">Hey, take a time to relax!</h1>
+					<a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+						<span class="slideshow__slide-caption-subtitle-label">Everybody needs</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="slideshow__slide js-slider-home-slide is-current" data-slide="4">
+		<div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+			<div class="slideshow__slide-background-load-wrap background-absolute">
+				<div class="slideshow__slide-background-load background-absolute">
+					<div class="slideshow__slide-background-wrap background-absolute">
+						<div class="slideshow__slide-background background-absolute">
+							<div class="slideshow__slide-image-wrap background-absolute">
+								<div class="slideshow__slide-image background-absolute" style="background-image: url('https://agsacademy.com/wp-content/uploads/2018/01/IMG_5216-750x300.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slideshow__slide-caption">
+			<div class="slideshow__slide-caption-text">
+				<div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+					<h1 class="slideshow__slide-caption-title">Everything broken can be repaired</h1>
+					<a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+						<span class="slideshow__slide-caption-subtitle-label">See how</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="slideshow__slide js-slider-home-slide is-current" data-slide="5">
+		<div class="slideshow__slide-background-parallax background-absolute js-parallax" data-speed="-1" data-position="top" data-target="#js-header">
+			<div class="slideshow__slide-background-load-wrap background-absolute">
+				<div class="slideshow__slide-background-load background-absolute">
+					<div class="slideshow__slide-background-wrap background-absolute">
+						<div class="slideshow__slide-background background-absolute">
+							<div class="slideshow__slide-image-wrap background-absolute">
+								<div class="slideshow__slide-image background-absolute" style="background-image: url('https://agsacademy.com/wp-content/uploads/2018/12/DSC_6028-750x300.jpg');"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slideshow__slide-caption">
+			<div class="slideshow__slide-caption-text">
+				<div class="container js-parallax" data-speed="2" data-position="top" data-target="#js-header">
+					<h1 class="slideshow__slide-caption-title">Everything broken can be repaired</h1>
+					<a class="slideshow__slide-caption-subtitle -load o-hsub -link" href="#">
+						<span class="slideshow__slide-caption-subtitle-label">See how</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="c-header-home_footer">
+		<div class="o-container">
+			<div class="c-header-home_controls -nomobile o-button-group">
+				<div class="js-parallax is-inview" data-speed="1" data-position="top" data-target="#js-header">
+					<button class="o-button -white -square -left js-slider-home-button js-slider-home-prev" type="button">
+						<span class="o-button_label">
+							<svg class="o-button_icon" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-prev"></use></svg>
+						</span>
+					</button>
+					<button class="o-button -white -square js-slider-home-button js-slider-home-next" type="button">
+						<span class="o-button_label">
+							<svg class="o-button_icon" role="img"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-next"></use></svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+   
+    <svg xmlns="http://www.w3.org/2000/svg">
+    <symbol viewBox="0 0 18 18" id="arrow-next">
+        <path id="arrow-next-arrow.svg" d="M12.6,9L4,17.3L4.7,18l8.5-8.3l0,0L14,9l0,0l-0.7-0.7l0,0L4.7,0L4,0.7L12.6,9z"/>
+    </symbol>
+    <symbol viewBox="0 0 18 18" id="arrow-prev">
+        <path id="arrow-prev-arrow.svg" d="M14,0.7L13.3,0L4.7,8.3l0,0L4,9l0,0l0.7,0.7l0,0l8.5,8.3l0.7-0.7L5.4,9L14,0.7z"/>
+    </symbol>
+ </svg>
+  </section>
+<div>
+  
+    
+    <div class="sec-title">
+              <div class="title">About Us</div>
+            
+            </div>
+
+<a id="button"></a>
+
+<div id="wrapper">
+    <div id="container">
+
+        <section class="open-book">
+            <header>
+                <h1>Welcome to Anju Gill Academy</h1>
+                <h6>Jaunpur</h6>
+            </header>
+            <article>
+                <h2 class="chapter-title">ANJU GILL ACADEMY</h2>
+                <p>
+                    Surya Text Bhan Trust has established Anju Gill Academy (AGA) as a non-profit English-medium  K-12 school.  AGA is supported by U.S.A. based educational professionals. The school is a source of quality education with added emphasis on healthful and hygienic living aspects. It is a co-educational school.
+                </p>
+                <br>
+            
+                <p>
+                The admission to the academy will be on merit basis. It is our vision that 10% of admissions at this academy will go to deserving pupils whose families are poor and unable to afford education.        
+                 </p>
+                 <br>
+                 <div class="about_us__img" >
+                    <img src="https://agsacademy.com/wp-content/uploads/2018/12/DSC_5743-750x300.jpg" alt="">
+                    </div>
+                    <br>
+                <p>
+                    AGA’s core philosophy is expressed through integrity, mutual respect, pursuit of excellence, creativity, and innovation.
+                </p>
+                <br>
+                <p>The academy uses a comprehensive health-based education framework that is based upon CBSE curriculum. The framework is shown below in the diagram. The diagram shows an S.M.A.R.T. health-based K-12 school education framework for integrating healthful living standard course of study into the academic curriculum. As shown in the diagram, in order to develop various skills and knowledge, an integrated K-12 school course curriculum will be based upon S.M.A.R.T. healthful and academic goals. The school will use the S.M.A.R.T. (Specific, Measurable, Attainable, Realistic, and Time-bound) framework to set its goals and activities. The S.M.A.R.T. framework is an effective way to set and achieve individual as well as team goals.</p>
+               
+                <dl>
+                    <dt><strong>Vision</strong></dt>
+                    <dd>
+                        <!-- <em>noun</em><br> -->
+                        <br>
+                        AGA will provide that education by which a child develops character of honor, integrity, and self-confidence. We strive to produce youth who contribute to forming a healthy and virtuous community and nation. AGA will have emphasis on developing innovative mind and independent thinkers.
+                    </dd>
+                </dl>
+
+                <dt><strong>Mission</strong></dt>
+               <p>AGA aims to develop students who:</p>
+                <ul>
+                    <li>Mature intellectually, emotionally, socially, physically, and aesthetically</li>
+                    <li>
+                        Practice personal wellness
+                    </li>
+                    <li>Develop a passion for learning beyond school</li>
+                    <li>Take responsibility and develop independent mind</li>
+                    <li>Challenge their intellectual curiosity, critical thinking, multiple perspectives, and problem solving</li>
+                    <li>Would be encouraged to develop shared dialog through collaboration</li>
+                </ul>
+              <!--  <p>
+                    She was then picturing herself making marks on a novel like she used to in school. In her true fashion, she got carried away with "What ifs." 
+                </p>
+                <ul>
+                    <li>
+                        "What if highlighting the text actually looked <mark>like a highlighter</mark>?"
+                        <ul>
+                            <li>"What if I wanted it to be <mark class="pink">pink</mark>?"</li>
+                            <li>"<mark class="blue">Blue</mark>?"</li>
+                            <li>"<mark class="green">Green</mark>?"</li>
+                            <li>"<mark class="orange">Orange</mark>?"</li>
+                        </ul>
+                    </li>
+                    <li>"What if I found <s>a typo</s><sup>an error in the content</sup> and wanted to make a correction?"</li>
+                    <li>"What if I was viewing this on mobile&mdash;"</li>
+                </ul>
+                <p>
+                    The true obstacle showed its form. Responsiveness. How on Earth will she make this work?
+                </p>
+                <p>
+                    Erin pulled out her notepad and started sketching. First she began to illustrate the wireframe of the book in its entirety. Then she recorded some notes on how each element would break down as the screen size got smaller. After several minutes, the blueprint was complete. She came to the conclusion that mobile viewing must stay minimal. The pages go away, which makes the page numbers no longer have a function so they must go away, and if those go away then there is no need for a cover since it is used to help hold and protect pages.
+                </p>
+                <p>
+                    She looks back at the blinking cursor of her blank canvas in Sublime Text 2. Doubt begins to linger in the back of her mind with the thought of her new code never being used and her time spent ends up being a waste. Her fingers were typing anyway.
+                </p>
+                <p>
+                    Erin smirked, "Well at least I think it's worth a try."
+                </p>
+            -->
+            </article>
+            <footer>
+                <ol id="page-numbers">
+                    <li>1</li>
+                    <li>2</li>
+                </ol>
+            </footer>
+        </section>
+
+    </div>
+</div>
+<!--Features Section -->
+<div class="sec-title">
+              <div class="title">Features</div>
+            
+            </div>
+<!-- <main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Mountain View</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">To The Beach</h2>
+      <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Desert Destinations</h2>
+      <p class="copy">It's the desert you've always dreamed of</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Explore The Galaxy</h2>
+      <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Mountain View</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Mountain View</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Mountain View</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Mountain View</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+</main> -->
+
+<div class="wrappers">
+  <div class="cols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+						<div class="inner">
+							<p>Curriculum</p>
+              <span>Our school offers a rigorous and well-rounded curriculum designed to challenge and inspire our students to achieve their full potential.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>
+                            Our school offers a rigorous and well-rounded curriculum designed to challenge and inspire our students to achieve their full potential.
+                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="url(https://unsplash.it/511/511/)">
+						<div class="inner">
+							<p>Teachers</p>
+              <span> Our teachers are experienced, passionate, and dedicated to providing a high-quality education for all students.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p> Our teachers are experienced, passionate, and dedicated to providing a high-quality education for all students.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+						<div class="inner">
+							<p>Facilities</p>
+              <span> Our state-of-the-art facilities provide students with a comfortable and safe learning environment that includes modern classrooms, labs, libraries, and sports facilities.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p> Our state-of-the-art facilities provide students with a comfortable and safe learning environment that includes modern classrooms, labs, libraries, and sports facilities.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+						<div class="inner">
+							<p>Student body</p>
+              <span>Our diverse student body includes students from a variety of backgrounds and cultures, creating a rich learning environment where all students can thrive.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Our diverse student body includes students from a variety of backgrounds and cultures, creating a rich learning environment where all students can thrive.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/504/504/">
+						<div class="inner">
+							<p>Resources</p>
+              <span>Our school provides students with access to a wide range of resources, including textbooks, computers, software, and other learning materials to support their academic success.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Our school provides students with access to a wide range of resources, including textbooks, computers, software, and other learning materials to support their academic success.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+						<div class="inner">
+							<p>Extracurricular activities</p>
+              <span>Our school offers a variety of extracurricular activities that allow students to explore their interests and develop new skills, including sports teams, clubs, music programs, and community service opportunities.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Our school offers a variety of extracurricular activities that allow students to explore their interests and develop new skills, including sports teams, clubs, music programs, and community service opportunities.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/506/506/)">
+						<div class="inner">
+							<p>Parent involvement</p>
+              <span>We encourage parent involvement in the school community and value the support and partnership of parents in creating a positive learning environment for our students.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>We encourage parent involvement in the school community and value the support and partnership of parents in creating a positive learning environment for our students.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="containers">
+					<div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+						<div class="inner">
+							<p>Safety and security</p>
+              <span>We believe that partnerships with local organizations and businesses can help enrich the educational experience of our students. We collaborate with community partners to provide real-world learning opportunities and support our students' growth and development.</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>We believe that partnerships with local organizations and businesses can help enrich the educational experience of our students. We collaborate with community partners to provide real-world learning opportunities and support our students' growth and development.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ </div>
+ 
+ <div class="sec-title">
+              <div class="title">Principal's message</div>
+            
+            </div>
+
+ <div class="blog-slider">
+  <div class="blog-slider__wrp swiper-wrapper">
+    <div class="blog-slider__item swiper-slide">
+      <div class="blog-slider__img">
+        
+        <img src="https://agsacademy.com/wp-content/uploads/2018/12/DSC_5743-750x300.jpg" alt="">
+      </div>
+      <div class="blog-slider__content">
+        <div class="blog-slider__title">PRINCIPAL’S MESSAGE</div>
+        <span class="blog-slider__code">Principal’s Welcome …</span>
+        <div class="blog-slider__text ">
+            <p>Please allow me to extend a warm welcome to everyone on behalf of Anju Gill Academy (AGA). Our mission is to provide exceptional education opportunities for children to grow and learn in a stimulating and nurturing environment. That is the purpose of creating AGA. The school will endeavor to inculcate a stimulative learning experience. Our desire is to make AGA a unique place of learning. The management’s focus is geared to learning, exploration, and creativity so that the child can achieve well-rounded education. </p>
+            <br>
+            <p>Our Motto of Excellence in Education and All Round Development of our children is diligently pursued by providing a positive learning environment in which resources are channelized to achieve the maximum development of the physical, intellectual, social and spiritual aspects of our children’s personality. We aim to instill in them a shared perception of life which will draw them closer to their peers elsewhere, thus promoting a peaceful and harmonious environment where everyone can co-exist irrespective of caste, creed, and culture.</p>
+            <br>
+            <p>We pray that Almighty God would bless our children with good health, wisdom, knowledge, understanding and success in whatever they do.
+</p>
+            </div>
+     <!--   <a href="#" class="blog-slider__button">READ MORE</a> -->
+     <P>Principal</P>
+
+<P>Anju Gill Academy, Jaunpur.</P>
+      </div>
+    </div>    
+  </div>
+  <div class="blog-slider__pagination"></div>
+</div>
+
+ <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+          
+               
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p style="text-align: center;">Copyright &copy; 2023, All Right Reserved <a href="https://agsacademy.com/">Anju gill academy</a></p>
+                        </div>
+                    </div>
+                 
+             
+    
+        </div>
+    </footer>
+ </body>
+ </html>

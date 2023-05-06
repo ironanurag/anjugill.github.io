@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+       <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script> src="https://unpkg.co/gsap@3/dist/gsap.min.js" </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="index.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+   <script src="https://kit.fontawesome.com/f48cacfddf.js" crossorigin="anonymous"></script>
+<style>
+    li,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sec-title {
+  position: relative;
+  padding-bottom: 40px;
+  align-items: center;
+}
+.sec-title .title {
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  font-weight: 700;
+  padding-right: 50px;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.sec-title .title:before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 7px;
+  width: 40px;
+  height: 2px;
+  background-color: #3F51B5;;
+}
+.sec-title h2 {
+  position: relative;
+  color: #252525;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5em;
+  display: block;
+}
+.sec-title.light h2 {
+  color: #fff;
+}
+.contact-page-section {
+ align-items: center;
+  padding-top: 110px;
+  padding-bottom: 110px;
+}
+.contact-page-section .inner-contain {
+    margin: auto;
+    max-width: 80%;
+    align-items: center;
+  position: relative;
+  z-index: 1;
+  background-color:  #3F51B5;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.1);
+}
+.contact-page-section .form-column {
+  position: relative;
+  padding: 0 0 0 15px;
+}
+.contact-page-section .form-column .inner-column {
+  position: relative;
+  padding: 60px 45px 30px;
+  background-color: #fff;
+}
+.contact-page-section .info-column {
+    margin: auto;
+  position: relative;
+}
+.contact-page-section .info-column .inner-column {
+  position: relative;
+  padding: 60px 35px;
+}
+.contact-page-section .info-column h2 {
+  position: relative;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4em;
+  margin-bottom: 45px;
+}
+.contact-page-section .info-column .list-info {
+  position: relative;
+  margin-bottom: 60px;
+}
+.contact-page-section .info-column .list-info li {
+  position: relative;
+  margin-bottom: 25px;
+  font-size: 18px;
+  color: #fff;
+  line-height: 1.8em;
+  padding-left: 45px;
+}
+.contact-page-section .info-column .list-info li:last-child {
+  margin-bottom: 0;
+}
+.contact-page-section .info-column .list-info li i {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  color: #fff;
+  font-size: 30px;
+}
+.contact-form {
+  position: relative;
+}
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+  color: #222;
+  font-size: 14px;
+  line-height: 38px;
+  padding: 10px 30px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #00b8ca;
+}
+.contact-form textarea {
+  height: 250px;
+  resize: none;
+}
+.contact-form .theme-btn {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-transform: capitalize;
+  padding: 16px 39px;
+  border: 2px solid #00b8ca;
+  font-family: Arimo, sans-serif;
+  background: #00b8ca;
+  display: inline-block;
+  position: relative;
+  line-height: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+.contact-form .theme-btn:hover {
+  color: #00b8ca;
+  border-color: #00b8ca;
+  background: 0 0;
+}
+.contact-form input.error,
+.contact-form select.error,
+.contact-form textarea.error {
+  border-color: red !important;
+}
+.contact-form label.error {
+  display: block;
+  line-height: 24px;
+  padding: 5px 0 0;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: red;
+  font-weight: 500;
+}
+.social-icon-four {
+  position: relative;
+}
+.social-icon-four li {
+  position: relative;
+  margin-right: 18px;
+  display: inline-block;
+}
+.social-icon-four li.follow {
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  display: block;
+  margin-bottom: 20px;
+}
+.social-icon-four li a {
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.social-icon-four li a:hover {
+  color: #222;
+}
+
+   html { overflow-y: scroll; }
+body{
+   background-color: #90ADF9;
+ 
+}
+h1 {
+    font-size: 200%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+ font-family: serif;
+ font-weight: bold;
+ text-align: center;
+}
+.col-md-12{
+   height: 0px;
+   width: 100%;
+}
+nav.navbar.bootsnav{
+   border: none;
+   background: none;
+
+}
+nav.navbar.bootsnav ul.nav > li{ margin-right: 20px; }
+nav.navbar.bootsnav ul.nav > li > a{
+   padding: 10px 15px;
+   border-radius: 0;
+   font-size: 15px;
+   font-weight: 600;
+   color: #fff;
+   text-transform: uppercase;
+   position: relative;
+   transition: all 0.5s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a{ padding: 10px 30px 10px 15px; }
+nav.navbar.bootsnav ul.nav > li.active > a,
+nav.navbar.bootsnav ul.nav > li.active > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li.on > a{
+ color: #36000b;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:before,
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+   content: "";
+   width: 100%;
+   height: 100%;
+   background: #fff;
+   opacity: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: -1;
+   transform: translateX(-50%) translateY(-50%) rotate(0deg);
+   transition: all 0.4s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li > a > span:after{
+   width: 50px;
+   background-color: #90ADF9;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:before,
+nav.navbar.bootsnav ul.nav > li.active > a > span:before{
+ transform: translateX(-50%) translateY(-50%) rotate(0);
+ opacity: 1;
+}
+nav.navbar.bootsnav ul.nav > li:hover > a > span:after,
+nav.navbar.bootsnav ul.nav > li.active > a > span:after{
+ transform: translateX(-50%) translateY(-50%) rotate(0);
+ opacity: 1;
+ width: 0;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   margin: 0 0 0 7px;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown > ul{
+   top: 100%;
+   transition: all 0.8s ease 0s;
+}
+nav.navbar.bootsnav ul.nav > li.dropdown.on > ul{ top: 140%; }
+.dropdown-menu.multi-dropdown{
+   position: absolute;
+   left: -100% !important;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   border: none;
+   border-radius: 10px;
+}
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content li{ font-size: 14px; }
+nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title{
+   font-size: 16px;
+   font-weight: bold;
+   color:#90ADF9 ;
+}
+@media only screen and (max-width: 990px){
+   .dropdown-menu.multi-dropdown{ left: 0 !important; }
+   nav.navbar.bootsnav .navbar-toggle{
+       background: transparent !important;
+       color: #fff;
+   }
+   nav.navbar.bootsnav ul.nav > li{
+       width: 75%;
+       margin: 5px auto 15px;
+   }
+   nav.navbar.bootsnav.navbar-mobile ul.nav > li > a{
+       text-align: center;
+       color: #fff;
+       border: none;
+   }
+   nav.navbar.bootsnav ul.nav > li.active > a,
+   nav.navbar.bootsnav ul.nav > li > a,
+   nav.navbar.bootsnav ul.nav > li > a:hover,
+   nav.navbar.bootsnav ul.nav > li.on > a{ color: #36000b; }
+   nav.navbar.bootsnav.navbar-mobile .navbar-collapse{ background: #90ADF9; }
+   nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu > li > a{
+       color: #fff;
+       border-bottom-color: none;
+   }
+   nav.navbar.bootsnav ul.nav > li.dropdown > ul{ top: 100%; }
+   nav.navbar.bootsnav li.dropdown ul.dropdown-menu.megamenu-content .title,
+   nav.navbar.bootsnav.navbar-mobile ul.nav ul.dropdown-menu .col-menu ul.menu-col li a{
+       font-size: 14px;
+       font-weight: normal;
+       color: #fff;
+   }
+    
+   header p {
+    font-family: "Allura";
+    color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 0;
+    font-size: 60px;
+    margin-top: -30px;
+  }
+  
+</style>
+   
+</head>
+<body>
+   
+    <div class="container">
+        
+        <div class="row">
+       
+            
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                  
+                    <div class="navbar-header">
+                      
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                   
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            
+                            <li class="btn ">
+                                
+                            <a  href="index.html" data-hover="Home">Home <span></span></a></li>
+                            
+                            <li class="btn dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">About <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="about.html">About School</a></li>
+                                    <li><a href="facility.html">Facility</a></li>
+                                    <li><a href="rules.html">General Rules and Regulations</a></li>
+                                    <li><a href="#">Fee Structure</a></li>
+                                    
+                                
+                                </ul>
+                            </li>
+                            <li class="btn dropdown ">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="About">Academics <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    
+                                    <li><a href="Academics.html">Academics</a></li>
+                                    <li><a href="#">Faculty and Staff</a></li>
+                                
+                                
+                                </ul>
+                            </li>
+                            
+                         <!--   <li class="dropdown btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="Pages">Pages <span></span></a>
+                                
+                                <ul class="dropdown-menu animated">
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                        
+                                        <ul class="dropdown-menu animated">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                                <ul class="dropdown-menu multi-dropdown animated">
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                    <li><a href="#">Custom Menu</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                   <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                    <li><a href="#">Custom Menu</a></li>
+                                </ul>
+                            </li> -->
+                          
+                            <li  class="btn" ><a href="admission.html" data-hover="Portfolio">admission <span></span></a></li>
+
+                     <!--  <li class="dropdown megamenu-fw btn">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Megamenu <span></span></a>
+                                <ul class="dropdown-menu megamenu-content animated" role="menu">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu One</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Two</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Three</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-menu col-md-3">
+                                                <h6 class="title">Title Menu Four</h6>
+                                                <div class="content">
+                                                    <ul class="menu-col">
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                        <li><a href="#">Custom Menu</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li class="btn active"><a href="contact.html" data-hover="Contact">Contact Us<span></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+   <header>
+  <div class="headline">
+    <div class="inner">
+      <h1>Contact Us</h1>
+    <p>Anju Gill Academy</p>
+    </div>
+  </div>
+</header>
+<a id="button"></a>
+<section class="contact-page-section">
+      <div class="contain">
+          <div class="sec-title">
+              <div class="title">Contact Us</div>
+            
+            </div>
+            <div class="inner-contain">
+              <div class="row clearfix">
+                
+                  <!--Form Column-->
+
+                    
+                    <!--Info Column-->
+                    <div class="info-column col-md-4 col-sm-12 col-xs-12">
+                      <div class="inner-column">
+                          <h2>Contact Info</h2>
+                            <ul class="list-info">
+                              <li><i class="fas fa-globe"></i>Anju Gill Academy
+                                Village: Katghara,
+                                P.O.: Muradganj, Tahsil: Sadar
+                                District: Jaunpur
+                                Uttar Pradesh,  India PIN: 222002</li>
+                                <li><i class="far fa-envelope"></i>agacademy5@gmail.com</li>
+                                <li><i class="fas fa-phone"></i>+91 7705-012955<br> +91 7705-012959</li>
+                            </ul>
+                      <!--      <ul class="social-icon-four">
+                                <li class="follow">Follow on: </li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                            </ul>-->
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+          
+               
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p style="text-align: center;">Copyright &copy; 2023, All Right Reserved <a href="https://agsacademy.com/">Anju gill academy</a></p>
+                        </div>
+                    </div>
+                 
+             
+    
+        </div>
+    </footer>
+</body>
+</html>
